@@ -1,0 +1,190 @@
+name: Python Tests
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'backend/**'
+      - 'requirements.txt'
+      - '.github/workflows/python-tests.yml'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'backend/**'
+      - 'requirements.txt'
+      - '.github/workflows/python-tests.yml'
+  workflow_dispatch:
+    # Allows manual triggering
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    services:
+      dynamodb-local:
+        image: amazon/dynamodb-local:latest
+        ports:
+          - 8000:8000
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pytest pytest-asyncio pytest-cov awscli
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+    - name: Set up NLTK data
+      run: |
+        export NLTK_DATA=$HOME/nltk_data
+        echo "NLTK_DATA=$NLTK_DATA" >> $GITHUB_ENV
+        mkdir -p $NLTK_DATA
+        python -c "import nltk; nltk.download('vader_lexicon'); nltk.download('stopwords'); nltk.download('punkt'); nltk.download('averaged_perceptron_tagger')"
+
+    - name: Verify NLTK Downloads
+      run: |
+        python -c "import nltk; import os; print('NLTK_DATA environment variable:', os.environ.get('NLTK_DATA')); print('NLTK data path:', nltk.data.path); punkt_found = True; vader_found = True; try: punkt = nltk.data.find('tokenizers/punkt'); print('punkt found at:', punkt); except LookupError as e: print('punkt not found:', e); punkt_found = False; try: vader = nltk.data.find('sentiment/vader_lexicon.zip'); print('vader found at:', vader); except LookupError as e: print('vader not found:', e); vader_found = False; assert punkt_found and vader_found, 'Required NLTK resources not found'"
+
+    - name: Create .env file
+      run: |
+        echo "APP_NAME=Mental Health Support" > .env
+        echo "APP_VERSION=0.1.0" >> .env
+        echo "DEBUG=True" >> .env
+        echo "SECRET_KEY=test-secret-key" >> .env
+        echo "ALGORITHM=HS256" >> .env
+        echo "ACCESS_TOKEN_EXPIRE_MINUTES=30" >> .env
+        echo "AWS_ACCESS_KEY_ID=fakeAccessKeyId" >> .env
+        echo "AWS_SECRET_ACCESS_KEY=fakeSecretAccessKey" >> .env
+        echo "AWS_REGION=us-east-1" >> .env
+        echo "DYNAMODB_ENDPOINT=http://localhost:8000" >> .env
+        echo "S3_BUCKET_NAME=test-bucket" >> .env
+        echo "OPENAI_API_KEY=fake-openai-key" >> .env
+        echo "GOOGLE_API_KEY=fake-google-key" >> .env
+
+    - name: Set up DynamoDB tables
+      run: |
+        # Wait for DynamoDB to be ready
+        sleep 10
+        # Create a simple test table for testing
+        python -c "import boto3; dynamodb = boto3.resource('dynamodb', endpoint_url='http://localhost:8000', region_name='us-east-1', aws_access_key_id='fakeAccessKeyId', aws_secret_access_key='fakeSecretAccessKey'); table = dynamodb.create_table(TableName='test_table', KeySchema=[{'AttributeName': 'id', 'KeyType': 'HASH'}], AttributeDefinitions=[{'AttributeName': 'id', 'AttributeType': 'S'}], ProvisionedThroughput={'ReadCapacityUnits': 5, 'WriteCapacityUnits': 5}); print('Test table created successfully')"
+
+    - name: Create test file
+      run: |
+        mkdir -p backend/tests/temp
+        cat > backend/tests/temp/test_nlp_service.py << 'EOF'
+"""
+Tests for NLP service with explicit NLTK path setup.
+"""
+import os
+import sys
+import nltk
+import pytest
+
+# Ensure NLTK data is loaded from the correct path
+nltk.data.path = [os.environ.get('NLTK_DATA', os.path.expanduser('~/nltk_data'))]
+print(f"NLTK data path set to: {nltk.data.path}")
+
+# Import the rest of the test file
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+from backend.services.nlp_service import (
+    calculate_sentiment_score,
+    analyze_sentiment,
+    extract_keywords
+)
+
+@pytest.mark.unit
+def test_calculate_sentiment_score():
+    """Test sentiment score calculation."""
+    # Positive text
+    positive_text = "I am feeling great today! Everything is wonderful."
+    positive_score = calculate_sentiment_score(positive_text)
+    assert isinstance(positive_score, float)
+    assert 0 < positive_score <= 1
+
+    # Negative text
+    negative_text = "I am feeling terrible today. Everything is awful."
+    negative_score = calculate_sentiment_score(negative_text)
+    assert isinstance(negative_score, float)
+    assert -1 <= negative_score < 0
+
+    # Neutral text
+    neutral_text = "Today is Monday. The sky is blue."
+    neutral_score = calculate_sentiment_score(neutral_text)
+    assert isinstance(neutral_score, float)
+    assert -0.3 < neutral_score < 0.3  # Roughly neutral
+
+    # Empty text
+    empty_score = calculate_sentiment_score("")
+    assert empty_score == 0.0
+
+@pytest.mark.unit
+def test_analyze_sentiment():
+    """Test sentiment analysis."""
+    # Positive text
+    positive_text = "I am feeling great today! Everything is wonderful."
+    positive_sentiment = analyze_sentiment(positive_text)
+    assert isinstance(positive_sentiment, dict)
+    assert "compound" in positive_sentiment
+    assert "pos" in positive_sentiment
+    assert "neg" in positive_sentiment
+    assert "neu" in positive_sentiment
+    assert positive_sentiment["compound"] > 0
+
+    # Negative text
+    negative_text = "I am feeling terrible today. Everything is awful."
+    negative_sentiment = analyze_sentiment(negative_text)
+    assert isinstance(negative_sentiment, dict)
+    assert negative_sentiment["compound"] < 0
+
+    # Neutral text
+    neutral_text = "Today is Monday. The sky is blue."
+    neutral_sentiment = analyze_sentiment(neutral_text)
+    assert isinstance(neutral_sentiment, dict)
+    assert -0.3 < neutral_sentiment["compound"] < 0.3  # Roughly neutral
+
+    # Empty text
+    empty_sentiment = analyze_sentiment("")
+    assert empty_sentiment["compound"] == 0.0
+
+@pytest.mark.unit
+def test_extract_keywords():
+    """Test keyword extraction."""
+    # Test with normal text
+    text = "The quick brown fox jumps over the lazy dog. The fox is quick and brown."
+    keywords = extract_keywords(text, top_n=3)
+    assert isinstance(keywords, list)
+    assert len(keywords) <= 3
+
+    # Test with empty text
+    empty_keywords = extract_keywords("", top_n=3)
+    assert isinstance(empty_keywords, list)
+    assert len(empty_keywords) == 0
+
+    # Test with short text
+    short_keywords = extract_keywords("Hello world", top_n=3)
+    assert isinstance(short_keywords, list)
+    assert len(short_keywords) <= 2  # Should have at most 2 keywords
+
+    # Test with different top_n
+    many_keywords = extract_keywords(text, top_n=5)
+    assert isinstance(many_keywords, list)
+    assert len(many_keywords) <= 5
+EOF
+
+    - name: Run tests
+      run: |
+        mkdir -p reports
+        # Run the modified test
+        pytest backend/tests/temp/test_nlp_service.py -v --cov=backend.services.nlp_service --cov-report=xml
+
+    - name: Upload coverage report
+      uses: codecov/codecov-action@v3
+      with:
+        file: ./coverage.xml
+        fail_ci_if_error: false

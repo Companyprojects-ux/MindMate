@@ -1,0 +1,170 @@
+# Common Mental Health Assessments
+
+## PHQ-9 (Patient Health Questionnaire-9)
+
+The PHQ-9 is a 9-item self-report questionnaire used to assess the severity of depression symptoms. It is based on the diagnostic criteria for major depressive disorder in the DSM-5.
+
+### Questions
+
+The PHQ-9 asks how often the patient has been bothered by the following problems over the last 2 weeks:
+
+1. Little interest or pleasure in doing things
+2. Feeling down, depressed, or hopeless
+3. Trouble falling or staying asleep, or sleeping too much
+4. Feeling tired or having little energy
+5. Poor appetite or overeating
+6. Feeling bad about yourself — or that you are a failure or have let yourself or your family down
+7. Trouble concentrating on things, such as reading the newspaper or watching television
+8. Moving or speaking so slowly that other people could have noticed, or the opposite — being so fidgety or restless that you have been moving around a lot more than usual
+9. Thoughts that you would be better off dead or of hurting yourself in some way
+
+### Scoring
+
+Each item is scored from 0 to 3:
+- 0: Not at all
+- 1: Several days
+- 2: More than half the days
+- 3: Nearly every day
+
+Total scores range from 0 to 27, with higher scores indicating more severe depression.
+
+### Interpretation
+
+- 0-4: Minimal or no depression
+- 5-9: Mild depression
+- 10-14: Moderate depression
+- 15-19: Moderately severe depression
+- 20-27: Severe depression
+
+## GAD-7 (Generalized Anxiety Disorder-7)
+
+The GAD-7 is a 7-item self-report questionnaire used to assess the severity of generalized anxiety disorder symptoms.
+
+### Questions
+
+The GAD-7 asks how often the patient has been bothered by the following problems over the last 2 weeks:
+
+1. Feeling nervous, anxious, or on edge
+2. Not being able to stop or control worrying
+3. Worrying too much about different things
+4. Trouble relaxing
+5. Being so restless that it's hard to sit still
+6. Becoming easily annoyed or irritable
+7. Feeling afraid as if something awful might happen
+
+### Scoring
+
+Each item is scored from 0 to 3:
+- 0: Not at all
+- 1: Several days
+- 2: More than half the days
+- 3: Nearly every day
+
+Total scores range from 0 to 21, with higher scores indicating more severe anxiety.
+
+### Interpretation
+
+- 0-4: Minimal anxiety
+- 5-9: Mild anxiety
+- 10-14: Moderate anxiety
+- 15-21: Severe anxiety
+
+## PSS (Perceived Stress Scale)
+
+The PSS is a 10-item self-report questionnaire used to assess the perception of stress. It measures the degree to which situations in one's life are appraised as stressful.
+
+### Questions
+
+The PSS asks how often the patient has felt or thought a certain way during the last month:
+
+1. Been upset because of something that happened unexpectedly
+2. Felt that you were unable to control the important things in your life
+3. Felt nervous and stressed
+4. Felt confident about your ability to handle your personal problems
+5. Felt that things were going your way
+6. Found that you could not cope with all the things that you had to do
+7. Been able to control irritations in your life
+8. Felt that you were on top of things
+9. Been angered because of things that happened that were outside of your control
+10. Felt difficulties were piling up so high that you could not overcome them
+
+### Scoring
+
+Each item is scored from 0 to 4:
+- 0: Never
+- 1: Almost never
+- 2: Sometimes
+- 3: Fairly often
+- 4: Very often
+
+Items 4, 5, 7, and 8 are positively stated items and are scored in reverse.
+
+Total scores range from 0 to 40, with higher scores indicating higher perceived stress.
+
+### Interpretation
+
+- 0-13: Low stress
+- 14-26: Moderate stress
+- 27-40: High stress
+
+## AUDIT (Alcohol Use Disorders Identification Test)
+
+The AUDIT is a 10-item screening tool developed by the World Health Organization (WHO) to assess alcohol consumption, drinking behaviors, and alcohol-related problems.
+
+### Questions
+
+The AUDIT includes questions about:
+
+1. How often you have a drink containing alcohol
+2. How many drinks containing alcohol you have on a typical day when you are drinking
+3. How often you have six or more drinks on one occasion
+4. How often during the last year you found that you were not able to stop drinking once you had started
+5. How often during the last year you failed to do what was normally expected from you because of drinking
+6. How often during the last year you needed a first drink in the morning to get yourself going after a heavy drinking session
+7. How often during the last year you had a feeling of guilt or remorse after drinking
+8. How often during the last year you were unable to remember what happened the night before because you had been drinking
+9. Whether you or someone else has been injured as a result of your drinking
+10. Whether a relative or friend or a doctor or another health worker has been concerned about your drinking or suggested you cut down
+
+### Scoring
+
+Questions 1-8 are scored from 0 to 4, and questions 9-10 are scored 0, 2, or 4.
+
+Total scores range from 0 to 40, with higher scores indicating more hazardous and harmful drinking.
+
+### Interpretation
+
+- 0-7: Low-risk drinking
+- 8-15: Hazardous drinking
+- 16-19: Harmful drinking
+- 20-40: Possible alcohol dependence
+
+## Using Assessment Results
+
+### Clinical Decision-Making
+
+Assessment results can guide clinical decision-making in several ways:
+
+1. **Diagnosis**: Scores above certain thresholds may indicate the presence of a mental health condition.
+2. **Treatment planning**: The severity of symptoms can inform the intensity and type of treatment needed.
+3. **Monitoring progress**: Regular assessments can track changes in symptoms over time.
+4. **Risk assessment**: Some items, such as those related to suicidal thoughts, can help identify individuals at risk.
+
+### Limitations
+
+It's important to remember that these assessments have limitations:
+
+1. They are screening tools, not diagnostic instruments.
+2. They rely on self-report, which may be influenced by various factors.
+3. Cultural factors may affect how individuals interpret and respond to questions.
+4. They should be used as part of a comprehensive assessment, not in isolation.
+
+### Communicating Results
+
+When discussing assessment results with individuals:
+
+1. Explain what the assessment measures and its limitations.
+2. Present results in a clear, non-judgmental manner.
+3. Emphasize that the assessment is just one piece of information.
+4. Discuss next steps and treatment options based on the results.
+5. Provide hope and emphasize that mental health conditions are treatable.
