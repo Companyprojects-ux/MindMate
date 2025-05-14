@@ -1,0 +1,33 @@
+# Environment files
+.env
+
+# Node modules
+node_modules/
+
+# Temporary files
+vite-temp/
+
+# Backup files
+frontend_backup/
+
+# Python bytecode
+__pycache__/
+backend/__pycache__/
+scripts/__pycache__/
+
+# OS-specific files
+.DS_Store
+
+# Dependency directories
+venv/
+.venv/
+
+# Docker files
+docker/dynamodb/
+
+# Logs
+*.log
+
+# Packages
+*.swp
+*.*~

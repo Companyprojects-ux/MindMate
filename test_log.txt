@@ -1,0 +1,1119 @@
+2025-05-11 18:51:38,852 - api_tests - INFO - Starting test: test_health_check
+2025-05-11 18:51:38,863 - httpx - INFO - HTTP Request: GET http://testserver/api/health "HTTP/1.1 200 OK"
+2025-05-11 18:51:38,863 - api_tests - INFO - Response captured: {
+  "status_code": 200,
+  "headers": {
+    "content-length": "20",
+    "content-type": "application/json"
+  },
+  "body": {
+    "status": "healthy"
+  }
+}
+2025-05-11 18:51:38,863 - api_tests - INFO - Completed test: test_health_check
+2025-05-11 18:51:49,476 - api_tests - INFO - Starting test: test_health_check
+2025-05-11 18:51:49,486 - httpx - INFO - HTTP Request: GET http://testserver/api/health "HTTP/1.1 200 OK"
+2025-05-11 18:51:49,487 - api_tests - INFO - Response captured: {
+  "status_code": 200,
+  "headers": {
+    "content-length": "20",
+    "content-type": "application/json"
+  },
+  "body": {
+    "status": "healthy"
+  }
+}
+2025-05-11 18:51:49,487 - api_tests - INFO - Completed test: test_health_check
+2025-05-11 18:55:18,103 - api_tests - INFO - Starting test: test_health_check
+2025-05-11 18:55:18,112 - httpx - INFO - HTTP Request: GET http://testserver/api/health "HTTP/1.1 200 OK"
+2025-05-11 18:55:18,113 - api_tests - INFO - Response captured: {
+  "status_code": 200,
+  "headers": {
+    "content-length": "20",
+    "content-type": "application/json"
+  },
+  "body": {
+    "status": "healthy"
+  }
+}
+2025-05-11 18:55:18,113 - api_tests - INFO - Completed test: test_health_check
+2025-05-11 18:55:31,615 - api_tests - INFO - Starting test: test_chat_with_ai
+2025-05-11 18:55:31,774 - httpx - INFO - HTTP Request: POST http://testserver/api/ai/chat "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:55:31,774 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "27",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User not found"
+  }
+}
+2025-05-11 18:55:31,783 - api_tests - INFO - Completed test: test_chat_with_ai
+2025-05-11 18:55:31,784 - api_tests - INFO - Starting test: test_chat_with_ai_unauthenticated
+2025-05-11 18:55:31,787 - httpx - INFO - HTTP Request: POST http://testserver/api/ai/chat "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:55:31,788 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "41",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "Authorization header missing"
+  }
+}
+2025-05-11 18:55:31,789 - api_tests - INFO - Completed test: test_chat_with_ai_unauthenticated
+2025-05-11 18:55:31,790 - api_tests - INFO - Starting test: test_get_ai_suggestions
+2025-05-11 18:55:31,836 - httpx - INFO - HTTP Request: GET http://testserver/api/ai/suggestions "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:55:31,837 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "27",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User not found"
+  }
+}
+2025-05-11 18:55:31,838 - api_tests - INFO - Completed test: test_get_ai_suggestions
+2025-05-11 18:55:31,839 - api_tests - INFO - Starting test: test_get_ai_suggestions_unauthenticated
+2025-05-11 18:55:31,842 - httpx - INFO - HTTP Request: GET http://testserver/api/ai/suggestions "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:55:31,843 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "41",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "Authorization header missing"
+  }
+}
+2025-05-11 18:55:31,843 - api_tests - INFO - Completed test: test_get_ai_suggestions_unauthenticated
+2025-05-11 18:55:31,844 - api_tests - INFO - Starting test: test_get_visualization_data
+2025-05-11 18:55:31,891 - httpx - INFO - HTTP Request: GET http://testserver/api/ai/visualization_data?data_type=mood "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:55:31,892 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "27",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User not found"
+  }
+}
+2025-05-11 18:55:31,894 - api_tests - INFO - Completed test: test_get_visualization_data
+2025-05-11 18:55:31,894 - api_tests - INFO - Starting test: test_get_visualization_data_unauthenticated
+2025-05-11 18:55:31,897 - httpx - INFO - HTTP Request: GET http://testserver/api/ai/visualization_data?data_type=mood "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:55:31,898 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "41",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "Authorization header missing"
+  }
+}
+2025-05-11 18:55:31,898 - api_tests - INFO - Completed test: test_get_visualization_data_unauthenticated
+2025-05-11 18:55:31,899 - api_tests - INFO - Starting test: test_get_visualization_data_invalid_type
+2025-05-11 18:55:31,950 - httpx - INFO - HTTP Request: GET http://testserver/api/ai/visualization_data?data_type=invalid "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:55:31,950 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "27",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User not found"
+  }
+}
+2025-05-11 18:55:31,952 - api_tests - INFO - Completed test: test_get_visualization_data_invalid_type
+2025-05-11 18:55:31,953 - api_tests - INFO - Starting test: test_submit_feedback
+2025-05-11 18:55:32,001 - httpx - INFO - HTTP Request: POST http://testserver/api/ai/feedback?feedback=This+is+helpful "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:55:32,002 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "27",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User not found"
+  }
+}
+2025-05-11 18:55:32,003 - api_tests - INFO - Completed test: test_submit_feedback
+2025-05-11 18:55:32,004 - api_tests - INFO - Starting test: test_submit_feedback_unauthenticated
+2025-05-11 18:55:32,006 - httpx - INFO - HTTP Request: POST http://testserver/api/ai/feedback?feedback=This+is+helpful "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:55:32,006 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "41",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "Authorization header missing"
+  }
+}
+2025-05-11 18:55:32,007 - api_tests - INFO - Completed test: test_submit_feedback_unauthenticated
+2025-05-11 18:55:32,007 - api_tests - INFO - Starting test: test_get_weekly_report
+2025-05-11 18:55:32,057 - httpx - INFO - HTTP Request: GET http://testserver/api/ai/weekly-report "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:55:32,058 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "27",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User not found"
+  }
+}
+2025-05-11 18:55:32,061 - api_tests - INFO - Completed test: test_get_weekly_report
+2025-05-11 18:55:32,061 - api_tests - INFO - Starting test: test_get_weekly_report_unauthenticated
+2025-05-11 18:55:32,065 - httpx - INFO - HTTP Request: GET http://testserver/api/ai/weekly-report "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:55:32,065 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "41",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "Authorization header missing"
+  }
+}
+2025-05-11 18:55:32,066 - api_tests - INFO - Completed test: test_get_weekly_report_unauthenticated
+2025-05-11 18:55:32,066 - api_tests - INFO - Starting test: test_mental_health_support
+2025-05-11 18:55:34,985 - httpx - INFO - HTTP Request: GET http://testserver/mental_health_support?prompt=test "HTTP/1.1 200 OK"
+2025-05-11 18:55:34,985 - api_tests - INFO - Response captured: {
+  "status_code": 200,
+  "headers": {
+    "content-length": "711",
+    "content-type": "application/json"
+  },
+  "body": {
+    "response": "Understood. You've initiated a test. How can I help you with this test? Are you testing my:\n\n*   **Functionality?** (e.g., Can I answer questions, generate text, translate, etc.?)\n*   **Accuracy?** (e.g., Can I provide correct information?)\n*   **Creativity?** (e.g., Can I write a poem, story, or song?)\n*   **Speed?** (e.g., How quickly can I respond?)\n*   **Understanding of context?** (e.g., Can I remember previous turns in the conversation?)\n*   **Ability to follow instructions?** (e.g., Can I adhere to specific requirements?)\n*   **Something else entirely?**\n\nPlease provide more information so I can respond appropriately. Just saying \"test\" doesn't give me enough to go on."
+  }
+}
+2025-05-11 18:55:34,989 - api_tests - INFO - Completed test: test_mental_health_support
+2025-05-11 18:55:34,990 - api_tests - INFO - Starting test: test_coping_strategies
+2025-05-11 18:55:48,137 - httpx - INFO - HTTP Request: GET http://testserver/coping_strategies?user_input=test "HTTP/1.1 200 OK"
+2025-05-11 18:55:48,137 - api_tests - INFO - Response captured: {
+  "status_code": 200,
+  "headers": {
+    "content-length": "9376",
+    "content-type": "application/json"
+  },
+  "body": {
+    "strategies": "Okay, let's break down personalized coping strategies for dealing with test anxiety and stress. To make this truly *personalized*, I'll need you to consider a few things about yourself as you read through these. Think about:\n\n*   **Your Learning Style:** Are you a visual, auditory, kinesthetic, or read/write learner?\n*   **Your Personality:** Are you introverted or extroverted? Do you thrive on routine or prefer spontaneity?\n*   **Your Past Experiences:** What has worked for you in the past when dealing with stress? What hasn't?\n*   **Your Specific Test Concerns:** Are you worried about running out of time? Forgetting information? Blanking out?\n\nNow, here's a list of coping strategies, categorized for easier browsing, with personalization prompts:\n\n**I. Preparation & Study Strategies:**\n\n*   **Structured Study Schedule:**\n    *   **Description:** Create a realistic and detailed study schedule, breaking down the material into manageable chunks.\n    *   **Personalization:**  *If you're a spontaneous person, build in flexibility. If you thrive on routine, stick to your schedule rigorously. If you are a visual learner, use colored pens and highlighters. If you are an auditory learner, record yourself reading notes and listen to the recordings.*\n*   **Active Recall & Practice Testing:**\n    *   **Description:** Don't just passively reread notes. Actively try to recall information from memory and test yourself regularly using flashcards, practice questions, or online quizzes.\n    *   **Personalization:** *If you are a read/write learner, try rewriting your notes from memory to test your retention. If you're a kinesthetic learner, try creating a game or activity that involves moving around and reciting information.*\n*   **Spaced Repetition:**\n    *   **Description:** Review material at increasing intervals. This helps solidify information in long-term memory.\n    *   **Personalization:** *Use a spaced repetition app like Anki or Quizlet to automate the process. Tailor the intervals to your learning speed and the difficulty of the material.*\n*   **Concept Mapping/Mind Mapping:**\n    *   **Description:** Visually organize information and connect concepts using diagrams.\n    *   **Personalization:** *Use colors, images, and symbols that resonate with you. Focus on the relationships between concepts, rather than just memorizing facts.*\n*   **Simulate Test Conditions:**\n    *   **Description:** Take practice tests under timed conditions in a quiet environment similar to the actual test setting.\n    *   **Personalization:** *If you get anxious about time, practice time management strategies during practice tests. If you get distracted by noise, use noise-canceling headphones during practice.*\n*   **Identify and Address Knowledge Gaps:**\n    *   **Description:** Pinpoint areas where you're struggling and focus your study efforts on those specific topics.\n    *   **Personalization:** *Don't be afraid to ask for help from teachers, tutors, or classmates. Break down complex topics into smaller, more manageable chunks.*\n*   **Study Environment Optimization:**\n    *   **Description:** Create a dedicated study space that is free from distractions and conducive to learning.\n    *   **Personalization:** *If you are an extrovert, consider studying in a library or coffee shop where you can be around other people. If you are an introvert, create a quiet and secluded study space at home.*\n\n**II. Pre-Test Day Strategies:**\n\n*   **Adequate Sleep:**\n    *   **Description:** Aim for 7-9 hours of quality sleep the night before the test.\n    *   **Personalization:** *Establish a relaxing bedtime routine to help you wind down. Avoid caffeine and screen time before bed.*\n*   **Healthy Diet:**\n    *   **Description:** Eat a nutritious meal before the test to provide sustained energy and focus.\n    *   **Personalization:** *Choose foods that you find comforting and that won't upset your stomach. Avoid sugary foods that can lead to energy crashes.*\n*   **Light Exercise:**\n    *   **Description:** Engage in some light physical activity to reduce stress and improve mood.\n    *   **Personalization:** *Go for a walk, do some yoga, or dance to your favorite music. Choose an activity that you enjoy and that doesn't require too much exertion.*\n*   **Review, Don't Cram:**\n    *   **Description:** Avoid cramming the night before the test. Instead, focus on reviewing key concepts and strategies.\n    *   **Personalization:** *Focus on your strengths and areas where you feel confident. Avoid dwelling on topics that you find particularly challenging.*\n*   **Prepare Materials:**\n    *   **Description:** Gather all necessary materials (pencils, calculator, ID) and pack them the night before to avoid last-minute stress.\n    *   **Personalization:** *Create a checklist to ensure that you don't forget anything. Place your materials in a designated spot where you can easily find them.*\n*   **Visualize Success:**\n    *   **Description:** Imagine yourself taking the test calmly and confidently, answering questions correctly, and achieving your desired outcome.\n    *   **Personalization:** *Focus on the positive aspects of the test and your ability to succeed. Use vivid imagery and sensory details to make the visualization more realistic.*\n\n**III. During-Test Strategies:**\n\n*   **Deep Breathing & Relaxation Techniques:**\n    *   **Description:** Practice deep breathing exercises to calm your nerves and reduce anxiety.\n    *   **Personalization:** *Find a breathing technique that works for you (e.g., box breathing, diaphragmatic breathing). Practice it regularly so that you can use it effectively during the test.*\n*   **Positive Self-Talk:**\n    *   **Description:** Replace negative thoughts with positive affirmations and encouraging statements.\n    *   **Personalization:** *Develop a list of positive affirmations that you can repeat to yourself during the test. Focus on your strengths and your ability to overcome challenges.*\n*   **Time Management:**\n    *   **Description:** Allocate time for each section of the test and stick to your schedule.\n    *   **Personalization:** *Use a watch or timer to track your progress. If you get stuck on a question, move on and come back to it later.*\n*   **Focus on One Question at a Time:**\n    *   **Description:** Avoid dwelling on previous questions or worrying about future ones. Focus your attention on the task at hand.\n    *   **Personalization:** *If you find your mind wandering, gently redirect your attention back to the question. Use mindfulness techniques to stay present in the moment.*\n*   **Read Questions Carefully:**\n    *   **Description:** Take your time to read each question carefully and understand what is being asked.\n    *   **Personalization:** *Underline key words and phrases to help you focus on the important information. Eliminate incorrect answer choices to narrow down your options.*\n*   **Trust Your Instincts:**\n    *   **Description:** If you're unsure of the answer, trust your gut feeling.\n    *   **Personalization:** *If you have a strong feeling about a particular answer, go with it. Don't second-guess yourself unless you have a good reason to do so.*\n*   **Take Breaks (If Allowed):**\n    *   **Description:** If the test allows for breaks, use them to stretch, walk around, and clear your head.\n    *   **Personalization:** *Use the break to do something that you find relaxing and enjoyable. Avoid talking to other students about the test.*\n\n**IV. Post-Test Strategies:**\n\n*   **Reward Yourself:**\n    *   **Description:** Celebrate your accomplishment, regardless of the outcome.\n    *   **Personalization:** *Do something that you enjoy and that makes you feel good about yourself. Treat yourself to a special meal, watch a movie, or spend time with friends and family.*\n*   **Reflect on the Experience:**\n    *   **Description:** Analyze what went well and what could be improved for future tests.\n    *   **Personalization:** *Identify any areas where you struggled and develop strategies for addressing those challenges in the future. Focus on what you learned from the experience, rather than dwelling on any mistakes you may have made.*\n*   **Seek Support:**\n    *   **Description:** Talk to a trusted friend, family member, or counselor about your experience.\n    *   **Personalization:** *Share your feelings and concerns with someone who will listen and offer support. Avoid comparing yourself to others.*\n\n**Important Considerations for Personalization:**\n\n*   **Experiment:** Not every strategy will work for everyone. Try different techniques and see what resonates with you.\n*   **Be Patient:** It takes time to develop effective coping strategies. Don't get discouraged if you don't see results immediately.\n*   **Be Kind to Yourself:** Remember that everyone experiences stress and anxiety from time to time. Be compassionate with yourself and celebrate your progress.\n*   **Seek Professional Help:** If your test anxiety is severe or interfering with your daily life, consider seeking professional help from a therapist or counselor.\n\nBy considering your individual needs and preferences, you can create a personalized coping plan that will help you manage test anxiety and perform your best. Good luck!"
+  }
+}
+2025-05-11 18:55:48,139 - api_tests - INFO - Completed test: test_coping_strategies
+2025-05-11 18:55:48,140 - api_tests - INFO - Starting test: test_health_check
+2025-05-11 18:55:48,142 - httpx - INFO - HTTP Request: GET http://testserver/api/health "HTTP/1.1 200 OK"
+2025-05-11 18:55:48,142 - api_tests - INFO - Completed test: test_health_check
+2025-05-11 18:55:48,143 - api_tests - INFO - Starting test: test_mental_health_support
+2025-05-11 18:55:49,607 - httpx - INFO - HTTP Request: GET http://testserver/mental_health_support?prompt=test "HTTP/1.1 200 OK"
+2025-05-11 18:55:49,607 - api_tests - INFO - Completed test: test_mental_health_support
+2025-05-11 18:55:49,608 - api_tests - INFO - Starting test: test_coping_strategies
+2025-05-11 18:56:00,018 - httpx - INFO - HTTP Request: GET http://testserver/coping_strategies?user_input=test "HTTP/1.1 200 OK"
+2025-05-11 18:56:00,018 - api_tests - INFO - Completed test: test_coping_strategies
+2025-05-11 18:56:00,019 - api_tests - INFO - Starting test: test_ai_suggestions
+2025-05-11 18:56:00,272 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:00,495 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:00,578 - httpx - INFO - HTTP Request: POST http://testserver/api/moods "HTTP/1.1 201 Created"
+2025-05-11 18:56:00,579 - api_tests - INFO - Completed test: test_ai_suggestions
+2025-05-11 18:56:00,580 - api_tests - INFO - Starting test: test_feedback
+2025-05-11 18:56:00,798 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:01,019 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:01,099 - httpx - INFO - HTTP Request: POST http://testserver/api/ai/feedback?feedback=test "HTTP/1.1 200 OK"
+2025-05-11 18:56:01,100 - api_tests - INFO - Completed test: test_feedback
+2025-05-11 18:56:01,101 - api_tests - INFO - Starting test: test_visualization_data
+2025-05-11 18:56:01,321 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:01,540 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:01,657 - httpx - INFO - HTTP Request: GET http://testserver/api/ai/visualization_data?data_type=mood "HTTP/1.1 200 OK"
+2025-05-11 18:56:01,658 - api_tests - INFO - Completed test: test_visualization_data
+2025-05-11 18:56:01,658 - api_tests - INFO - Starting test: test_ai_suggestions_unauthenticated
+2025-05-11 18:56:01,660 - httpx - INFO - HTTP Request: GET http://testserver/api/ai/suggestions "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:01,660 - api_tests - INFO - Completed test: test_ai_suggestions_unauthenticated
+2025-05-11 18:56:01,661 - api_tests - INFO - Starting test: test_visualization_data_unauthenticated
+2025-05-11 18:56:01,663 - httpx - INFO - HTTP Request: GET http://testserver/api/ai/visualization_data?data_type=mood "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:01,663 - api_tests - INFO - Completed test: test_visualization_data_unauthenticated
+2025-05-11 18:56:01,663 - api_tests - INFO - Starting test: test_feedback_unauthenticated
+2025-05-11 18:56:01,667 - httpx - INFO - HTTP Request: POST http://testserver/api/ai/feedback?feedback=test "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:01,668 - api_tests - INFO - Completed test: test_feedback_unauthenticated
+2025-05-11 18:56:01,669 - api_tests - INFO - Starting test: test_register_invalid_email
+2025-05-11 18:56:01,677 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/register "HTTP/1.1 422 Unprocessable Entity"
+2025-05-11 18:56:01,678 - api_tests - INFO - Completed test: test_register_invalid_email
+2025-05-11 18:56:01,680 - api_tests - INFO - Starting test: test_register_short_password
+2025-05-11 18:56:01,684 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/register "HTTP/1.1 422 Unprocessable Entity"
+2025-05-11 18:56:01,685 - api_tests - INFO - Completed test: test_register_short_password
+2025-05-11 18:56:01,685 - api_tests - INFO - Starting test: test_create_mood_entry_unauthenticated
+2025-05-11 18:56:01,689 - httpx - INFO - HTTP Request: POST http://testserver/api/moods "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:01,689 - api_tests - INFO - Completed test: test_create_mood_entry_unauthenticated
+2025-05-11 18:56:01,690 - api_tests - INFO - Starting test: test_list_mood_entries_unauthenticated
+2025-05-11 18:56:01,693 - httpx - INFO - HTTP Request: GET http://testserver/api/moods "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:01,694 - api_tests - INFO - Completed test: test_list_mood_entries_unauthenticated
+2025-05-11 18:56:01,695 - api_tests - INFO - Starting test: test_get_mood_statistics_unauthenticated
+2025-05-11 18:56:01,698 - httpx - INFO - HTTP Request: GET http://testserver/api/moods/stats "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:01,699 - api_tests - INFO - Completed test: test_get_mood_statistics_unauthenticated
+2025-05-11 18:56:01,700 - api_tests - INFO - Starting test: test_get_mood_entry_unauthenticated
+2025-05-11 18:56:01,923 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:02,154 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:02,231 - httpx - INFO - HTTP Request: POST http://testserver/api/moods "HTTP/1.1 201 Created"
+2025-05-11 18:56:02,234 - httpx - INFO - HTTP Request: GET http://testserver/api/moods/dc532fd9-ec2e-488d-8fa1-f58a27c84bcd "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:02,234 - api_tests - INFO - Completed test: test_get_mood_entry_unauthenticated
+2025-05-11 18:56:02,235 - api_tests - INFO - Starting test: test_update_mood_entry_unauthenticated
+2025-05-11 18:56:02,459 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:02,684 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:02,766 - httpx - INFO - HTTP Request: POST http://testserver/api/moods "HTTP/1.1 201 Created"
+2025-05-11 18:56:02,768 - httpx - INFO - HTTP Request: PUT http://testserver/api/moods/c00878e1-c3ca-4576-8c2d-df845c01ea18 "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:02,769 - api_tests - INFO - Completed test: test_update_mood_entry_unauthenticated
+2025-05-11 18:56:02,769 - api_tests - INFO - Starting test: test_delete_mood_entry_unauthenticated
+2025-05-11 18:56:02,990 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:03,224 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:03,301 - httpx - INFO - HTTP Request: POST http://testserver/api/moods "HTTP/1.1 201 Created"
+2025-05-11 18:56:03,303 - httpx - INFO - HTTP Request: DELETE http://testserver/api/moods/77d46744-61fc-4393-93f8-b3602a0dc54f "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:03,304 - api_tests - INFO - Completed test: test_delete_mood_entry_unauthenticated
+2025-05-11 18:56:03,304 - api_tests - INFO - Starting test: test_get_mood_entry_invalid_id
+2025-05-11 18:56:03,305 - api_tests - INFO - Completed test: test_get_mood_entry_invalid_id
+2025-05-11 18:56:03,305 - api_tests - INFO - Starting test: test_create_reminder_unauthenticated
+2025-05-11 18:56:03,308 - httpx - INFO - HTTP Request: POST http://testserver/api/reminders "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:03,531 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:03,751 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:03,836 - httpx - INFO - HTTP Request: POST http://testserver/api/medications "HTTP/1.1 201 Created"
+2025-05-11 18:56:03,949 - httpx - INFO - HTTP Request: POST http://testserver/api/reminders "HTTP/1.1 201 Created"
+2025-05-11 18:56:03,951 - httpx - INFO - HTTP Request: GET http://testserver/api/reminders/9e818eca-463d-4b7d-ae6a-d3e168dcd0d4 "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:03,952 - api_tests - INFO - Completed test: test_create_reminder_unauthenticated
+2025-05-11 18:56:03,952 - api_tests - INFO - Starting test: test_list_reminders_unauthenticated
+2025-05-11 18:56:03,954 - httpx - INFO - HTTP Request: GET http://testserver/api/reminders "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:03,954 - api_tests - INFO - Completed test: test_list_reminders_unauthenticated
+2025-05-11 18:56:03,955 - api_tests - INFO - Starting test: test_get_today_reminders_unauthenticated
+2025-05-11 18:56:03,958 - httpx - INFO - HTTP Request: GET http://testserver/api/reminders/today "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:03,958 - api_tests - INFO - Completed test: test_get_today_reminders_unauthenticated
+2025-05-11 18:56:03,959 - api_tests - INFO - Starting test: test_get_upcoming_reminders_unauthenticated
+2025-05-11 18:56:03,962 - httpx - INFO - HTTP Request: GET http://testserver/api/reminders/upcoming "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:03,963 - api_tests - INFO - Completed test: test_get_upcoming_reminders_unauthenticated
+2025-05-11 18:56:03,963 - api_tests - INFO - Starting test: test_update_reminder_unauthenticated
+2025-05-11 18:56:04,196 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:04,425 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:04,501 - httpx - INFO - HTTP Request: POST http://testserver/api/medications "HTTP/1.1 201 Created"
+2025-05-11 18:56:04,619 - httpx - INFO - HTTP Request: POST http://testserver/api/reminders "HTTP/1.1 201 Created"
+2025-05-11 18:56:04,621 - httpx - INFO - HTTP Request: PUT http://testserver/api/reminders/dcc7158c-b28c-4000-891e-8ce91fc93ccc "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:04,622 - api_tests - INFO - Completed test: test_update_reminder_unauthenticated
+2025-05-11 18:56:04,622 - api_tests - INFO - Starting test: test_update_reminder_status_unauthenticated
+2025-05-11 18:56:04,843 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:05,063 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:05,145 - httpx - INFO - HTTP Request: POST http://testserver/api/medications "HTTP/1.1 201 Created"
+2025-05-11 18:56:05,264 - httpx - INFO - HTTP Request: POST http://testserver/api/reminders "HTTP/1.1 201 Created"
+2025-05-11 18:56:05,266 - httpx - INFO - HTTP Request: PUT http://testserver/api/reminders/1a7183f9-72eb-4f40-a342-0930386cf1fb/status "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:05,267 - api_tests - INFO - Completed test: test_update_reminder_status_unauthenticated
+2025-05-11 18:56:05,267 - api_tests - INFO - Starting test: test_delete_reminder_unauthenticated
+2025-05-11 18:56:05,482 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:05,703 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:05,783 - httpx - INFO - HTTP Request: POST http://testserver/api/medications "HTTP/1.1 201 Created"
+2025-05-11 18:56:05,897 - httpx - INFO - HTTP Request: POST http://testserver/api/reminders "HTTP/1.1 201 Created"
+2025-05-11 18:56:05,900 - httpx - INFO - HTTP Request: DELETE http://testserver/api/reminders/1717a168-77c5-4387-b780-009e3cb6df4d "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:05,900 - api_tests - INFO - Completed test: test_delete_reminder_unauthenticated
+2025-05-11 18:56:05,901 - api_tests - INFO - Starting test: test_get_reminder_invalid_id
+2025-05-11 18:56:06,127 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:06,359 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:06,438 - httpx - INFO - HTTP Request: GET http://testserver/api/reminders/invalid-id "HTTP/1.1 404 Not Found"
+2025-05-11 18:56:06,439 - api_tests - INFO - Completed test: test_get_reminder_invalid_id
+2025-05-11 18:56:06,439 - api_tests - INFO - Starting test: test_update_reminder_invalid_id
+2025-05-11 18:56:06,669 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:06,897 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:06,975 - httpx - INFO - HTTP Request: PUT http://testserver/api/reminders/invalid-id "HTTP/1.1 404 Not Found"
+2025-05-11 18:56:06,975 - api_tests - INFO - Completed test: test_update_reminder_invalid_id
+2025-05-11 18:56:06,976 - api_tests - INFO - Starting test: test_update_reminder_status_invalid_id
+2025-05-11 18:56:07,202 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:07,434 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:07,508 - httpx - INFO - HTTP Request: PUT http://testserver/api/reminders/invalid-id/status "HTTP/1.1 404 Not Found"
+2025-05-11 18:56:07,508 - api_tests - INFO - Completed test: test_update_reminder_status_invalid_id
+2025-05-11 18:56:07,508 - api_tests - INFO - Starting test: test_delete_reminder_invalid_id
+2025-05-11 18:56:07,725 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:07,942 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:08,015 - httpx - INFO - HTTP Request: DELETE http://testserver/api/reminders/invalid-id "HTTP/1.1 404 Not Found"
+2025-05-11 18:56:08,243 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:08,466 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:08,540 - httpx - INFO - HTTP Request: GET http://testserver/api/moods/invalid-id "HTTP/1.1 404 Not Found"
+2025-05-11 18:56:08,541 - api_tests - INFO - Completed test: test_delete_reminder_invalid_id
+2025-05-11 18:56:08,542 - api_tests - INFO - Starting test: test_update_mood_entry_invalid_id
+2025-05-11 18:56:08,542 - api_tests - INFO - Completed test: test_update_mood_entry_invalid_id
+2025-05-11 18:56:08,542 - api_tests - INFO - Starting test: test_delete_mood_entry_invalid_id
+2025-05-11 18:56:08,759 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:08,975 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:09,049 - httpx - INFO - HTTP Request: PUT http://testserver/api/moods/invalid-id "HTTP/1.1 404 Not Found"
+2025-05-11 18:56:09,050 - api_tests - INFO - Completed test: test_delete_mood_entry_invalid_id
+2025-05-11 18:56:09,051 - api_tests - INFO - Starting test: test_create_medication_unauthenticated
+2025-05-11 18:56:09,053 - httpx - INFO - HTTP Request: POST http://testserver/api/medications "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:09,054 - api_tests - INFO - Completed test: test_create_medication_unauthenticated
+2025-05-11 18:56:09,054 - api_tests - INFO - Starting test: test_list_medications_unauthenticated
+2025-05-11 18:56:09,056 - httpx - INFO - HTTP Request: GET http://testserver/api/medications "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:09,056 - api_tests - INFO - Completed test: test_list_medications_unauthenticated
+2025-05-11 18:56:09,056 - api_tests - INFO - Starting test: test_get_medication_unauthenticated
+2025-05-11 18:56:09,274 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:09,492 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:09,570 - httpx - INFO - HTTP Request: POST http://testserver/api/medications "HTTP/1.1 201 Created"
+2025-05-11 18:56:09,572 - httpx - INFO - HTTP Request: GET http://testserver/api/medications/e816427b-83d6-4fae-aa1a-52ab438c460d "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:09,572 - api_tests - INFO - Completed test: test_get_medication_unauthenticated
+2025-05-11 18:56:09,572 - api_tests - INFO - Starting test: test_update_medication_unauthenticated
+2025-05-11 18:56:09,789 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:10,012 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:10,096 - httpx - INFO - HTTP Request: GET http://testserver/api/moods/invalid-id "HTTP/1.1 404 Not Found"
+2025-05-11 18:56:10,097 - api_tests - INFO - Completed test: test_update_medication_unauthenticated
+2025-05-11 18:56:10,098 - api_tests - INFO - Starting test: test_update_medication_invalid_id
+2025-05-11 18:56:10,324 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:10,560 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:10,648 - httpx - INFO - HTTP Request: PUT http://testserver/api/medications/invalid-id "HTTP/1.1 404 Not Found"
+2025-05-11 18:56:10,648 - api_tests - INFO - Completed test: test_update_medication_invalid_id
+2025-05-11 18:56:10,649 - api_tests - INFO - Starting test: test_delete_medication_invalid_id
+2025-05-11 18:56:10,892 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:11,133 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:11,211 - httpx - INFO - HTTP Request: DELETE http://testserver/api/medications/invalid-id "HTTP/1.1 404 Not Found"
+2025-05-11 18:56:11,211 - api_tests - INFO - Completed test: test_delete_medication_invalid_id
+2025-05-11 18:56:11,212 - api_tests - INFO - Starting test: test_delete_medication_unauthenticated
+2025-05-11 18:56:13,667 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:13,909 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:13,996 - httpx - INFO - HTTP Request: POST http://testserver/api/medications "HTTP/1.1 201 Created"
+2025-05-11 18:56:13,998 - httpx - INFO - HTTP Request: DELETE http://testserver/api/medications/c79ccc46-b344-4461-ae82-cd42e9d7aa3a "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:13,999 - api_tests - INFO - Completed test: test_delete_medication_unauthenticated
+2025-05-11 18:56:13,999 - api_tests - INFO - Starting test: test_get_medication_invalid_id
+2025-05-11 18:56:14,236 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:14,470 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:14,551 - httpx - INFO - HTTP Request: GET http://testserver/api/medications/invalid-id "HTTP/1.1 404 Not Found"
+2025-05-11 18:56:14,551 - api_tests - INFO - Completed test: test_get_medication_invalid_id
+2025-05-11 18:56:14,552 - api_tests - INFO - Starting test: test_create_journal_entry_unauthenticated
+2025-05-11 18:56:14,554 - httpx - INFO - HTTP Request: POST http://testserver/api/journal "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:14,554 - api_tests - INFO - Completed test: test_create_journal_entry_unauthenticated
+2025-05-11 18:56:14,555 - api_tests - INFO - Starting test: test_list_journal_entries_unauthenticated
+2025-05-11 18:56:14,557 - httpx - INFO - HTTP Request: GET http://testserver/api/journal "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:14,557 - api_tests - INFO - Completed test: test_list_journal_entries_unauthenticated
+2025-05-11 18:56:14,558 - api_tests - INFO - Starting test: test_search_journal_entries_unauthenticated
+2025-05-11 18:56:14,560 - httpx - INFO - HTTP Request: GET http://testserver/api/journal/search?query=test "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:14,561 - api_tests - INFO - Completed test: test_search_journal_entries_unauthenticated
+2025-05-11 18:56:14,561 - api_tests - INFO - Starting test: test_get_journal_entry_unauthenticated
+2025-05-11 18:56:14,798 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:15,030 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:15,127 - httpx - INFO - HTTP Request: POST http://testserver/api/journal "HTTP/1.1 201 Created"
+2025-05-11 18:56:15,130 - httpx - INFO - HTTP Request: GET http://testserver/api/journal/2b990f9f-0a92-44dc-912d-3e9a539f3228 "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:15,130 - api_tests - INFO - Completed test: test_get_journal_entry_unauthenticated
+2025-05-11 18:56:15,131 - api_tests - INFO - Starting test: test_update_journal_entry_unauthenticated
+2025-05-11 18:56:15,364 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:15,610 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:15,704 - httpx - INFO - HTTP Request: POST http://testserver/api/journal "HTTP/1.1 201 Created"
+2025-05-11 18:56:15,708 - httpx - INFO - HTTP Request: PUT http://testserver/api/journal/f61b67ea-cf99-4f31-b62f-d587baf50102 "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:15,708 - api_tests - INFO - Completed test: test_update_journal_entry_unauthenticated
+2025-05-11 18:56:15,709 - api_tests - INFO - Starting test: test_delete_journal_entry_unauthenticated
+2025-05-11 18:56:15,946 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:16,182 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:16,321 - httpx - INFO - HTTP Request: POST http://testserver/api/journal "HTTP/1.1 201 Created"
+2025-05-11 18:56:16,323 - httpx - INFO - HTTP Request: DELETE http://testserver/api/journal/141ea03f-9dd6-4f00-9d4e-e71a7b585ace "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:16,324 - api_tests - INFO - Completed test: test_delete_journal_entry_unauthenticated
+2025-05-11 18:56:16,324 - api_tests - INFO - Starting test: test_get_journal_entry_invalid_id
+2025-05-11 18:56:16,562 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:16,796 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:16,883 - httpx - INFO - HTTP Request: GET http://testserver/api/journal/invalid-id "HTTP/1.1 404 Not Found"
+2025-05-11 18:56:16,884 - api_tests - INFO - Completed test: test_get_journal_entry_invalid_id
+2025-05-11 18:56:16,884 - api_tests - INFO - Starting test: test_update_journal_entry_invalid_id
+2025-05-11 18:56:17,120 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:17,354 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:17,443 - httpx - INFO - HTTP Request: PUT http://testserver/api/journal/invalid-id "HTTP/1.1 404 Not Found"
+2025-05-11 18:56:17,443 - api_tests - INFO - Completed test: test_update_journal_entry_invalid_id
+2025-05-11 18:56:17,444 - api_tests - INFO - Starting test: test_delete_journal_entry_invalid_id
+2025-05-11 18:56:17,675 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:17,907 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:17,985 - httpx - INFO - HTTP Request: DELETE http://testserver/api/journal/invalid-id "HTTP/1.1 404 Not Found"
+2025-05-11 18:56:18,064 - httpx - INFO - HTTP Request: DELETE http://testserver/api/moods/invalid-id "HTTP/1.1 404 Not Found"
+2025-05-11 18:56:18,065 - api_tests - INFO - Completed test: test_delete_journal_entry_invalid_id
+2025-05-11 18:56:18,065 - api_tests - INFO - Starting test: test_login_incorrect_password
+2025-05-11 18:56:18,301 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 200 OK"
+2025-05-11 18:56:18,532 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:18,533 - api_tests - INFO - Completed test: test_login_incorrect_password
+2025-05-11 18:56:18,534 - api_tests - INFO - Starting test: test_refresh_token_unauthenticated
+2025-05-11 18:56:18,536 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/refresh "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:18,536 - api_tests - INFO - Completed test: test_refresh_token_unauthenticated
+2025-05-11 18:56:18,536 - api_tests - INFO - Starting test: test_get_user_profile_unauthenticated
+2025-05-11 18:56:18,538 - httpx - INFO - HTTP Request: GET http://testserver/api/auth/me "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:18,539 - api_tests - INFO - Completed test: test_get_user_profile_unauthenticated
+2025-05-11 18:56:18,539 - api_tests - INFO - Starting test: test_update_user_profile_unauthenticated
+2025-05-11 18:56:18,541 - httpx - INFO - HTTP Request: PUT http://testserver/api/auth/me "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:18,542 - api_tests - INFO - Completed test: test_update_user_profile_unauthenticated
+2025-05-11 18:56:18,542 - api_tests - INFO - Starting test: test_change_password_unauthenticated
+2025-05-11 18:56:18,545 - httpx - INFO - HTTP Request: PUT http://testserver/api/auth/password "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:18,545 - api_tests - INFO - Completed test: test_change_password_unauthenticated
+2025-05-11 18:56:18,546 - api_tests - INFO - Starting test: test_register_success
+2025-05-11 18:56:18,600 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/register "HTTP/1.1 400 Bad Request"
+2025-05-11 18:56:18,600 - api_tests - INFO - Response captured: {
+  "status_code": 400,
+  "headers": {
+    "content-length": "48",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User with this email already exists"
+  }
+}
+2025-05-11 18:56:18,602 - api_tests - INFO - Completed test: test_register_success
+2025-05-11 18:56:18,603 - api_tests - INFO - Starting test: test_register_existing_email
+2025-05-11 18:56:18,648 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/register "HTTP/1.1 400 Bad Request"
+2025-05-11 18:56:18,649 - api_tests - INFO - Response captured: {
+  "status_code": 400,
+  "headers": {
+    "content-length": "48",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User with this email already exists"
+  }
+}
+2025-05-11 18:56:18,649 - api_tests - INFO - Completed test: test_register_existing_email
+2025-05-11 18:56:18,650 - api_tests - INFO - Starting test: test_register_invalid_email
+2025-05-11 18:56:18,656 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/register "HTTP/1.1 422 Unprocessable Entity"
+2025-05-11 18:56:18,656 - api_tests - INFO - Response captured: {
+  "status_code": 422,
+  "headers": {
+    "content-length": "221",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": [
+      {
+        "type": "value_error",
+        "loc": [
+          "body",
+          "email"
+        ],
+        "msg": "value is not a valid email address: An email address must have an @-sign.",
+        "input": "invalid-email",
+        "ctx": {
+          "reason": "An email address must have an @-sign."
+        }
+      }
+    ]
+  }
+}
+2025-05-11 18:56:18,657 - api_tests - INFO - Completed test: test_register_invalid_email
+2025-05-11 18:56:18,658 - api_tests - INFO - Starting test: test_register_short_password
+2025-05-11 18:56:18,665 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/register "HTTP/1.1 422 Unprocessable Entity"
+2025-05-11 18:56:18,666 - api_tests - INFO - Response captured: {
+  "status_code": 422,
+  "headers": {
+    "content-length": "154",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": [
+      {
+        "type": "string_too_short",
+        "loc": [
+          "body",
+          "password"
+        ],
+        "msg": "String should have at least 8 characters",
+        "input": "short",
+        "ctx": {
+          "min_length": 8
+        }
+      }
+    ]
+  }
+}
+2025-05-11 18:56:18,668 - api_tests - INFO - Completed test: test_register_short_password
+2025-05-11 18:56:18,669 - api_tests - INFO - Starting test: test_login_success
+2025-05-11 18:56:18,909 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:18,910 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "38",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "Invalid email or password"
+  }
+}
+2025-05-11 18:56:18,912 - api_tests - INFO - Completed test: test_login_success
+2025-05-11 18:56:18,912 - api_tests - INFO - Starting test: test_login_invalid_email
+2025-05-11 18:56:18,960 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:18,960 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "38",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "Invalid email or password"
+  }
+}
+2025-05-11 18:56:18,960 - api_tests - INFO - Completed test: test_login_invalid_email
+2025-05-11 18:56:18,961 - api_tests - INFO - Starting test: test_login_incorrect_password
+2025-05-11 18:56:19,204 - httpx - INFO - HTTP Request: POST http://testserver/api/auth/login "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:19,205 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "38",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "Invalid email or password"
+  }
+}
+2025-05-11 18:56:19,205 - api_tests - INFO - Completed test: test_login_incorrect_password
+2025-05-11 18:56:19,206 - api_tests - INFO - Starting test: test_get_user_profile
+2025-05-11 18:56:19,256 - httpx - INFO - HTTP Request: GET http://testserver/api/auth/me "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:19,256 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "27",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User not found"
+  }
+}
+2025-05-11 18:56:19,258 - api_tests - INFO - Completed test: test_get_user_profile
+2025-05-11 18:56:19,259 - api_tests - INFO - Starting test: test_get_user_profile_unauthenticated
+2025-05-11 18:56:19,262 - httpx - INFO - HTTP Request: GET http://testserver/api/auth/me "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:19,262 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "41",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "Authorization header missing"
+  }
+}
+2025-05-11 18:56:19,263 - api_tests - INFO - Completed test: test_get_user_profile_unauthenticated
+2025-05-11 18:56:19,263 - api_tests - INFO - Starting test: test_update_user_profile
+2025-05-11 18:56:19,270 - api_tests - INFO - Completed test: test_update_user_profile
+2025-05-11 18:56:19,272 - api_tests - INFO - Starting test: test_update_user_profile_unauthenticated
+2025-05-11 18:56:19,276 - httpx - INFO - HTTP Request: PUT http://testserver/api/auth/me "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:19,277 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "41",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "Authorization header missing"
+  }
+}
+2025-05-11 18:56:19,277 - api_tests - INFO - Completed test: test_update_user_profile_unauthenticated
+2025-05-11 18:56:19,278 - api_tests - INFO - Starting test: test_health_check
+2025-05-11 18:56:19,282 - httpx - INFO - HTTP Request: GET http://testserver/api/health "HTTP/1.1 200 OK"
+2025-05-11 18:56:19,282 - api_tests - INFO - Response captured: {
+  "status_code": 200,
+  "headers": {
+    "content-length": "20",
+    "content-type": "application/json"
+  },
+  "body": {
+    "status": "healthy"
+  }
+}
+2025-05-11 18:56:19,283 - api_tests - INFO - Completed test: test_health_check
+2025-05-11 18:56:19,284 - api_tests - INFO - Starting test: test_create_journal_entry
+2025-05-11 18:56:19,335 - httpx - INFO - HTTP Request: POST http://testserver/api/journal "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:19,335 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "27",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User not found"
+  }
+}
+2025-05-11 18:56:19,338 - api_tests - INFO - Completed test: test_create_journal_entry
+2025-05-11 18:56:19,339 - api_tests - INFO - Starting test: test_create_journal_entry_unauthenticated
+2025-05-11 18:56:19,343 - httpx - INFO - HTTP Request: POST http://testserver/api/journal "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:19,343 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "41",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "Authorization header missing"
+  }
+}
+2025-05-11 18:56:19,344 - api_tests - INFO - Completed test: test_create_journal_entry_unauthenticated
+2025-05-11 18:56:19,344 - api_tests - INFO - Starting test: test_list_journal_entries
+2025-05-11 18:56:19,395 - httpx - INFO - HTTP Request: GET http://testserver/api/journal "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:19,395 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "27",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User not found"
+  }
+}
+2025-05-11 18:56:19,398 - api_tests - INFO - Completed test: test_list_journal_entries
+2025-05-11 18:56:19,398 - api_tests - INFO - Starting test: test_list_journal_entries_unauthenticated
+2025-05-11 18:56:19,401 - httpx - INFO - HTTP Request: GET http://testserver/api/journal "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:19,402 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "41",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "Authorization header missing"
+  }
+}
+2025-05-11 18:56:19,402 - api_tests - INFO - Completed test: test_list_journal_entries_unauthenticated
+2025-05-11 18:56:19,403 - api_tests - INFO - Starting test: test_search_journal_entries
+2025-05-11 18:56:19,453 - httpx - INFO - HTTP Request: GET http://testserver/api/journal/search?query=test "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:19,453 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "27",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User not found"
+  }
+}
+2025-05-11 18:56:19,455 - api_tests - INFO - Completed test: test_search_journal_entries
+2025-05-11 18:56:19,456 - api_tests - INFO - Starting test: test_search_journal_entries_unauthenticated
+2025-05-11 18:56:19,459 - httpx - INFO - HTTP Request: GET http://testserver/api/journal/search?query=test "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:19,459 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "41",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "Authorization header missing"
+  }
+}
+2025-05-11 18:56:19,460 - api_tests - INFO - Completed test: test_search_journal_entries_unauthenticated
+2025-05-11 18:56:19,461 - api_tests - INFO - Starting test: test_get_journal_entry
+2025-05-11 18:56:19,510 - httpx - INFO - HTTP Request: GET http://testserver/api/journal/test-journal-id "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:19,510 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "27",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User not found"
+  }
+}
+2025-05-11 18:56:19,512 - api_tests - INFO - Completed test: test_get_journal_entry
+2025-05-11 18:56:19,512 - api_tests - INFO - Starting test: test_get_journal_entry_not_found
+2025-05-11 18:56:19,642 - httpx - INFO - HTTP Request: GET http://testserver/api/journal/nonexistent-id "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:19,643 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "27",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User not found"
+  }
+}
+2025-05-11 18:56:19,645 - api_tests - INFO - Completed test: test_get_journal_entry_not_found
+2025-05-11 18:56:19,646 - api_tests - INFO - Starting test: test_get_journal_entry_unauthenticated
+2025-05-11 18:56:19,648 - httpx - INFO - HTTP Request: GET http://testserver/api/journal/test-journal-id "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:19,649 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "41",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "Authorization header missing"
+  }
+}
+2025-05-11 18:56:19,649 - api_tests - INFO - Completed test: test_get_journal_entry_unauthenticated
+2025-05-11 18:56:19,650 - api_tests - INFO - Starting test: test_update_journal_entry
+2025-05-11 18:56:19,700 - httpx - INFO - HTTP Request: PUT http://testserver/api/journal/test-journal-id "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:19,701 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "27",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User not found"
+  }
+}
+2025-05-11 18:56:19,702 - api_tests - INFO - Completed test: test_update_journal_entry
+2025-05-11 18:56:19,703 - api_tests - INFO - Starting test: test_create_medication
+2025-05-11 18:56:19,756 - httpx - INFO - HTTP Request: POST http://testserver/api/medications "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:19,757 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "27",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User not found"
+  }
+}
+2025-05-11 18:56:19,761 - api_tests - INFO - Completed test: test_create_medication
+2025-05-11 18:56:19,762 - api_tests - INFO - Starting test: test_create_medication_unauthenticated
+2025-05-11 18:56:19,766 - httpx - INFO - HTTP Request: POST http://testserver/api/medications "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:19,767 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "41",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "Authorization header missing"
+  }
+}
+2025-05-11 18:56:19,768 - api_tests - INFO - Completed test: test_create_medication_unauthenticated
+2025-05-11 18:56:19,769 - api_tests - INFO - Starting test: test_list_medications
+2025-05-11 18:56:19,823 - httpx - INFO - HTTP Request: GET http://testserver/api/medications "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:19,823 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "27",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User not found"
+  }
+}
+2025-05-11 18:56:19,826 - api_tests - INFO - Completed test: test_list_medications
+2025-05-11 18:56:19,826 - api_tests - INFO - Starting test: test_list_medications_unauthenticated
+2025-05-11 18:56:19,830 - httpx - INFO - HTTP Request: GET http://testserver/api/medications "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:19,831 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "41",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "Authorization header missing"
+  }
+}
+2025-05-11 18:56:19,831 - api_tests - INFO - Completed test: test_list_medications_unauthenticated
+2025-05-11 18:56:19,832 - api_tests - INFO - Starting test: test_search_medications
+2025-05-11 18:56:19,885 - httpx - INFO - HTTP Request: GET http://testserver/api/medications?query=test "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:19,886 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "27",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User not found"
+  }
+}
+2025-05-11 18:56:19,888 - api_tests - INFO - Completed test: test_search_medications
+2025-05-11 18:56:19,889 - api_tests - INFO - Starting test: test_get_medication
+2025-05-11 18:56:19,936 - httpx - INFO - HTTP Request: GET http://testserver/api/medications/test-medication-id "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:19,937 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "27",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User not found"
+  }
+}
+2025-05-11 18:56:19,938 - api_tests - INFO - Completed test: test_get_medication
+2025-05-11 18:56:19,939 - api_tests - INFO - Starting test: test_get_medication_not_found
+2025-05-11 18:56:19,990 - httpx - INFO - HTTP Request: GET http://testserver/api/medications/nonexistent-id "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:19,991 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "27",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User not found"
+  }
+}
+2025-05-11 18:56:19,993 - api_tests - INFO - Completed test: test_get_medication_not_found
+2025-05-11 18:56:19,993 - api_tests - INFO - Starting test: test_get_medication_unauthenticated
+2025-05-11 18:56:19,996 - httpx - INFO - HTTP Request: GET http://testserver/api/medications/test-medication-id "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:19,996 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "41",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "Authorization header missing"
+  }
+}
+2025-05-11 18:56:19,997 - api_tests - INFO - Completed test: test_get_medication_unauthenticated
+2025-05-11 18:56:19,997 - api_tests - INFO - Starting test: test_update_medication
+2025-05-11 18:56:20,049 - httpx - INFO - HTTP Request: PUT http://testserver/api/medications/test-medication-id "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:20,050 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "27",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User not found"
+  }
+}
+2025-05-11 18:56:20,053 - api_tests - INFO - Completed test: test_update_medication
+2025-05-11 18:56:20,054 - api_tests - INFO - Starting test: test_delete_medication
+2025-05-11 18:56:20,104 - httpx - INFO - HTTP Request: DELETE http://testserver/api/medications/test-medication-id "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:20,105 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "27",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User not found"
+  }
+}
+2025-05-11 18:56:20,107 - api_tests - INFO - Completed test: test_delete_medication
+2025-05-11 18:56:20,107 - api_tests - INFO - Starting test: test_create_mood_entry
+2025-05-11 18:56:20,159 - httpx - INFO - HTTP Request: POST http://testserver/api/moods "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:20,160 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "27",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User not found"
+  }
+}
+2025-05-11 18:56:20,162 - api_tests - INFO - Completed test: test_create_mood_entry
+2025-05-11 18:56:20,163 - api_tests - INFO - Starting test: test_create_mood_entry_unauthenticated
+2025-05-11 18:56:20,166 - httpx - INFO - HTTP Request: POST http://testserver/api/moods "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:20,167 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "41",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "Authorization header missing"
+  }
+}
+2025-05-11 18:56:20,167 - api_tests - INFO - Completed test: test_create_mood_entry_unauthenticated
+2025-05-11 18:56:20,168 - api_tests - INFO - Starting test: test_create_mood_entry_invalid_rating
+2025-05-11 18:56:20,221 - httpx - INFO - HTTP Request: POST http://testserver/api/moods "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:20,221 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "27",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User not found"
+  }
+}
+2025-05-11 18:56:20,223 - api_tests - INFO - Completed test: test_create_mood_entry_invalid_rating
+2025-05-11 18:56:20,223 - api_tests - INFO - Starting test: test_list_mood_entries
+2025-05-11 18:56:20,271 - httpx - INFO - HTTP Request: GET http://testserver/api/moods "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:20,271 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "27",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User not found"
+  }
+}
+2025-05-11 18:56:20,273 - api_tests - INFO - Completed test: test_list_mood_entries
+2025-05-11 18:56:20,274 - api_tests - INFO - Starting test: test_list_mood_entries_unauthenticated
+2025-05-11 18:56:20,276 - httpx - INFO - HTTP Request: GET http://testserver/api/moods "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:20,276 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "41",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "Authorization header missing"
+  }
+}
+2025-05-11 18:56:20,276 - api_tests - INFO - Completed test: test_list_mood_entries_unauthenticated
+2025-05-11 18:56:20,277 - api_tests - INFO - Starting test: test_get_mood_entry
+2025-05-11 18:56:20,326 - httpx - INFO - HTTP Request: GET http://testserver/api/moods/test-mood-id "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:20,326 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "27",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User not found"
+  }
+}
+2025-05-11 18:56:20,328 - api_tests - INFO - Completed test: test_get_mood_entry
+2025-05-11 18:56:20,329 - api_tests - INFO - Starting test: test_get_mood_entry_not_found
+2025-05-11 18:56:20,376 - httpx - INFO - HTTP Request: GET http://testserver/api/moods/nonexistent-id "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:20,376 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "27",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User not found"
+  }
+}
+2025-05-11 18:56:20,378 - api_tests - INFO - Completed test: test_get_mood_entry_not_found
+2025-05-11 18:56:20,379 - api_tests - INFO - Starting test: test_get_mood_entry_unauthenticated
+2025-05-11 18:56:20,382 - httpx - INFO - HTTP Request: GET http://testserver/api/moods/test-mood-id "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:20,383 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "41",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "Authorization header missing"
+  }
+}
+2025-05-11 18:56:20,383 - api_tests - INFO - Completed test: test_get_mood_entry_unauthenticated
+2025-05-11 18:56:20,384 - api_tests - INFO - Starting test: test_update_mood_entry
+2025-05-11 18:56:20,435 - httpx - INFO - HTTP Request: PUT http://testserver/api/moods/test-mood-id "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:20,436 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "27",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User not found"
+  }
+}
+2025-05-11 18:56:20,438 - api_tests - INFO - Completed test: test_update_mood_entry
+2025-05-11 18:56:20,438 - api_tests - INFO - Starting test: test_update_mood_entry_not_found
+2025-05-11 18:56:20,490 - httpx - INFO - HTTP Request: PUT http://testserver/api/moods/nonexistent-id "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:20,490 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "27",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User not found"
+  }
+}
+2025-05-11 18:56:20,492 - api_tests - INFO - Completed test: test_update_mood_entry_not_found
+2025-05-11 18:56:20,493 - api_tests - INFO - Starting test: test_update_mood_entry_unauthenticated
+2025-05-11 18:56:20,498 - httpx - INFO - HTTP Request: PUT http://testserver/api/moods/test-mood-id "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:20,499 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "41",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "Authorization header missing"
+  }
+}
+2025-05-11 18:56:20,500 - api_tests - INFO - Completed test: test_update_mood_entry_unauthenticated
+2025-05-11 18:56:20,501 - api_tests - INFO - Starting test: test_create_reminder
+2025-05-11 18:56:20,552 - httpx - INFO - HTTP Request: POST http://testserver/api/reminders "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:20,553 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "27",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User not found"
+  }
+}
+2025-05-11 18:56:20,555 - api_tests - INFO - Completed test: test_create_reminder
+2025-05-11 18:56:20,555 - api_tests - INFO - Starting test: test_create_reminder_unauthenticated
+2025-05-11 18:56:20,558 - httpx - INFO - HTTP Request: POST http://testserver/api/reminders "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:20,558 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "41",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "Authorization header missing"
+  }
+}
+2025-05-11 18:56:20,559 - api_tests - INFO - Completed test: test_create_reminder_unauthenticated
+2025-05-11 18:56:20,559 - api_tests - INFO - Starting test: test_create_reminder_medication_not_found
+2025-05-11 18:56:20,603 - httpx - INFO - HTTP Request: POST http://testserver/api/reminders "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:20,604 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "27",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User not found"
+  }
+}
+2025-05-11 18:56:20,606 - api_tests - INFO - Completed test: test_create_reminder_medication_not_found
+2025-05-11 18:56:20,606 - api_tests - INFO - Starting test: test_list_reminders
+2025-05-11 18:56:20,658 - httpx - INFO - HTTP Request: GET http://testserver/api/reminders "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:20,658 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "27",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User not found"
+  }
+}
+2025-05-11 18:56:20,660 - api_tests - INFO - Completed test: test_list_reminders
+2025-05-11 18:56:20,660 - api_tests - INFO - Starting test: test_list_reminders_unauthenticated
+2025-05-11 18:56:20,662 - httpx - INFO - HTTP Request: GET http://testserver/api/reminders "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:20,663 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "41",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "Authorization header missing"
+  }
+}
+2025-05-11 18:56:20,663 - api_tests - INFO - Completed test: test_list_reminders_unauthenticated
+2025-05-11 18:56:20,663 - api_tests - INFO - Starting test: test_get_today_reminders
+2025-05-11 18:56:20,711 - httpx - INFO - HTTP Request: GET http://testserver/api/reminders/today "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:20,711 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "27",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User not found"
+  }
+}
+2025-05-11 18:56:20,713 - api_tests - INFO - Completed test: test_get_today_reminders
+2025-05-11 18:56:20,714 - api_tests - INFO - Starting test: test_get_upcoming_reminders
+2025-05-11 18:56:20,756 - httpx - INFO - HTTP Request: GET http://testserver/api/reminders/upcoming?days=7 "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:20,757 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "27",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User not found"
+  }
+}
+2025-05-11 18:56:20,758 - api_tests - INFO - Completed test: test_get_upcoming_reminders
+2025-05-11 18:56:20,759 - api_tests - INFO - Starting test: test_get_reminder
+2025-05-11 18:56:20,803 - httpx - INFO - HTTP Request: GET http://testserver/api/reminders/test-reminder-id "HTTP/1.1 401 Unauthorized"
+2025-05-11 18:56:20,803 - api_tests - INFO - Response captured: {
+  "status_code": 401,
+  "headers": {
+    "content-length": "27",
+    "content-type": "application/json"
+  },
+  "body": {
+    "detail": "User not found"
+  }
+}
+2025-05-11 18:56:20,805 - api_tests - INFO - Completed test: test_get_reminder
