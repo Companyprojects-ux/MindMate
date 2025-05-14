@@ -204,7 +204,7 @@ const AiChat = () => {
                           className={`max-w-3/4 rounded-lg px-4 py-2 ${
                             msg.is_user
                               ? 'bg-primary-600 text-white'
-                              : 'bg-gray-100 text-gray-800'
+                              : 'bg-gray-100'
                           }`}
                         >
                           <div className="flex items-center mb-1">
@@ -238,7 +238,9 @@ const AiChat = () => {
                               </div>
                             )}
                           </div>
-                          <div className="whitespace-pre-wrap">{msg.message}</div>
+                          <div className={`prose ${!msg.is_user ? 'text-gray-800' : 'text-white'} max-w-none`}>
+                            <ReactMarkdown>{msg.message}</ReactMarkdown>
+                          </div>
                         </div>
                       </div>
                     ))}
